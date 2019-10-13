@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Rabobank Customer Statement Processor</h1>
+<h3>Please select the file(.csv, .xml) to validate </h3>
+
+<form method="POST" action="/validate" onsubmit = "return validateForm()" enctype="multipart/form-data">
+    <input type="file" name="file" id="file"/><br/><br/>
+    <input type="submit" value="Submit"/>
+</form>
+<script>
+function validateForm()
+{
+	var file = document.getElementById("file").value;
+	if (file == "")
+		{
+		alert("Please select file before submitting");
+		return false;
+		}
+    return true;
+	
+	}
+</script>
+
+</body>
+</html>
